@@ -1,0 +1,26 @@
+{
+  ".github/workflows/cortex.yml": {
+    "mtime": 1794867589.875317,
+    "seen": 1794867593.2822185,
+    "ast_hash": "23a28de13f104f9470cfc7ac061567e3",
+    "semantic_hash": "23a28de13f104f9470cfc7ac061567e3"
+  },
+  ".github/workflows/pages.yml": {
+    "mtime": 1794867589.8755834,
+    "seen": 1794867593.282223,
+    "ast_hash": "2e4e92f17604821549d008b352d0683c",
+    "semantic_hash": "2e4e92f17604821549d008b352d0683c"
+  },
+  "assets/tarefas-mensais.js": {
+    "mtime": 1794867589.875757,
+    "seen": 1794867593.2822254,
+    "ast_hash": "2ff5ea7ad3a1ad0f05b9ab9c6c8e197a",
+    "semantic_hash": "2ff5ea7ad3a1ad0f05b9ab9c6c8e197a"
+  },
+  "supabase/functions/estruturar-tarefas/index.ts": {
+    "mtime": 1794867589.8766038,
+    "seen": 1794867593.2822268,
+    "ast_hash": "2e9f87d1d91c1eefa9faf81927e80313",
+    "semantic_hash": "2e9f87d1d91c1eefa9faf81927e80313"
+  }
+}

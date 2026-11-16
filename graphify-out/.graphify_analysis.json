@@ -1,0 +1,145 @@
+{
+  "communities": {
+    "0": [
+      "github_workflows_cortex",
+      "github_workflows_cortex_build_cortex_runs_on",
+      "github_workflows_cortex_build_cortex_steps",
+      "github_workflows_cortex_concurrency",
+      "github_workflows_cortex_concurrency_cancel_in_progress",
+      "github_workflows_cortex_concurrency_group",
+      "github_workflows_cortex_jobs",
+      "github_workflows_cortex_jobs_build_cortex",
+      "github_workflows_cortex_name",
+      "github_workflows_cortex_on",
+      "github_workflows_cortex_on_workflow_dispatch",
+      "github_workflows_cortex_permissions",
+      "github_workflows_cortex_permissions_contents",
+      "github_workflows_cortex_steps_name",
+      "github_workflows_cortex_steps_run",
+      "github_workflows_cortex_steps_uses"
+    ],
+    "1": [
+      "github_workflows_pages",
+      "github_workflows_pages_concurrency",
+      "github_workflows_pages_concurrency_cancel_in_progress",
+      "github_workflows_pages_concurrency_group",
+      "github_workflows_pages_jobs",
+      "github_workflows_pages_name",
+      "github_workflows_pages_on",
+      "github_workflows_pages_on_push",
+      "github_workflows_pages_on_workflow_dispatch",
+      "github_workflows_pages_permissions",
+      "github_workflows_pages_permissions_contents",
+      "github_workflows_pages_permissions_id_token",
+      "github_workflows_pages_permissions_pages",
+      "github_workflows_pages_push_branches"
+    ],
+    "2": [
+      "assets_tarefas_mensais",
+      "assets_tarefas_mensais_ajustarprazomensal",
+      "assets_tarefas_mensais_criarrepositoriotarefas",
+      "assets_tarefas_mensais_criarrepositoriotarefas_buscarocorrencia",
+      "assets_tarefas_mensais_criarrepositoriotarefas_usuarioatual",
+      "assets_tarefas_mensais_diasnomes",
+      "assets_tarefas_mensais_lerdata",
+      "assets_tarefas_mensais_prepararcampos",
+      "assets_tarefas_mensais_resultado",
+      "assets_tarefas_mensais_validardia"
+    ],
+    "3": [
+      "ref_npm_supabase",
+      "supabase_functions_estruturar_tarefas_index",
+      "supabase_functions_estruturar_tarefas_index_corsheaders",
+      "supabase_functions_estruturar_tarefas_index_explicitdates",
+      "supabase_functions_estruturar_tarefas_index_isrecord",
+      "supabase_functions_estruturar_tarefas_index_isvaliddate",
+      "supabase_functions_estruturar_tarefas_index_priorities",
+      "supabase_functions_estruturar_tarefas_index_respond",
+      "supabase_functions_estruturar_tarefas_index_tasktool",
+      "supabase_functions_estruturar_tarefas_index_validatesuggestions"
+    ],
+    "4": [
+      "github_workflows_pages_publish_steps",
+      "github_workflows_pages_steps_id",
+      "github_workflows_pages_steps_name",
+      "github_workflows_pages_steps_run",
+      "github_workflows_pages_steps_uses",
+      "github_workflows_pages_steps_with",
+      "github_workflows_pages_with_path",
+      "github_workflows_pages_with_python_version"
+    ],
+    "5": [
+      "github_workflows_pages_environment_name",
+      "github_workflows_pages_environment_url",
+      "github_workflows_pages_jobs_publish",
+      "github_workflows_pages_publish_environment",
+      "github_workflows_pages_publish_if",
+      "github_workflows_pages_publish_runs_on"
+    ]
+  },
+  "cohesion": {
+    "0": 0.125,
+    "1": 0.14285714285714285,
+    "2": 0.4,
+    "3": 0.28888888888888886,
+    "4": 0.25,
+    "5": 0.3333333333333333
+  },
+  "gods": [
+    {
+      "id": "github_workflows_pages_publish_steps",
+      "label": "steps",
+      "degree": 6
+    },
+    {
+      "id": "github_workflows_pages_jobs_publish",
+      "label": "publish",
+      "degree": 5
+    },
+    {
+      "id": "assets_tarefas_mensais_ajustarprazomensal",
+      "label": "ajustarPrazoMensal()",
+      "degree": 5
+    },
+    {
+      "id": "github_workflows_cortex_build_cortex_steps",
+      "label": "steps",
+      "degree": 4
+    },
+    {
+      "id": "github_workflows_pages_permissions",
+      "label": "permissions",
+      "degree": 4
+    },
+    {
+      "id": "assets_tarefas_mensais_lerdata",
+      "label": "lerData()",
+      "degree": 4
+    },
+    {
+      "id": "assets_tarefas_mensais_prepararcampos",
+      "label": "prepararCampos()",
+      "degree": 4
+    },
+    {
+      "id": "supabase_functions_estruturar_tarefas_index_validatesuggestions",
+      "label": "validateSuggestions()",
+      "degree": 4
+    },
+    {
+      "id": "github_workflows_cortex_concurrency",
+      "label": "concurrency",
+      "degree": 3
+    },
+    {
+      "id": "github_workflows_cortex_jobs_build_cortex",
+      "label": "build-cortex",
+      "degree": 3
+    }
+  ],
+  "surprises": [],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}
