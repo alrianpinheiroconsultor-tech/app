@@ -3,30 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aurian App — Organize seu dia</title>
-<meta name="description" content="Organize suas tarefas, acompanhe suas prioridades e dê mais leveza ao seu dia com o Aurian App.">
-<meta name="application-name" content="Aurian App">
+<title>ALRIAN APP — Organize seu dia</title>
+<meta name="description" content="Organize suas tarefas, acompanhe suas prioridades e dê mais leveza ao seu dia com o ALRIAN APP.">
+<meta name="application-name" content="ALRIAN APP">
 <meta name="theme-color" content="#11112a">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Aurian App">
+<meta name="apple-mobile-web-app-title" content="ALRIAN APP">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="icon" type="image/png" sizes="32x32" href="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?fit=crop&amp;crop=center&amp;w=32&amp;h=32&amp;fm=png">
 <link rel="apple-touch-icon" sizes="180x180" href="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?fit=crop&amp;crop=center&amp;w=180&amp;h=180&amp;fm=png">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:site_name" content="Aurian App">
-<meta property="og:title" content="Aurian App — Organize seu dia">
+<meta property="og:site_name" content="ALRIAN APP">
+<meta property="og:title" content="ALRIAN APP — Organize seu dia">
 <meta property="og:description" content="Suas tarefas, prioridades e conquistas em um só lugar.">
 <meta property="og:image" content="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?fit=crop&amp;crop=center&amp;w=1200&amp;h=630&amp;fm=jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Aurora boreal em tons verdes sobre um céu noturno — Aurian App">
+<meta property="og:image:alt" content="Aurora boreal em tons verdes sobre um céu noturno — ALRIAN APP">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Aurian App — Organize seu dia">
+<meta name="twitter:title" content="ALRIAN APP — Organize seu dia">
 <meta name="twitter:description" content="Suas tarefas, prioridades e conquistas em um só lugar.">
 <meta name="twitter:image" content="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?fit=crop&amp;crop=center&amp;w=1200&amp;h=630&amp;fm=jpg">
-<meta name="twitter:image:alt" content="Aurora boreal em um céu noturno — Aurian App">
+<meta name="twitter:image:alt" content="Aurora boreal em um céu noturno — ALRIAN APP">
 <style>
 :root {
   --purple: #6C5CE7; --purple-light: #a29bfe; --purple-dark: #5a4dd6;
@@ -280,8 +280,36 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-seri
 .bar-lbl{font-size:9px;color:var(--t2);}
 
 /* ── RESPONSIVE ── */
+:focus-visible{outline:2px solid var(--mint);outline-offset:4px;}
+.main{min-width:0;}
 @media(max-width:1100px){.stats-grid{grid-template-columns:repeat(2,1fr)}.dash-grid{grid-template-columns:1fr}}
-@media(max-width:780px){.sidebar{display:none}.main{margin-left:0}.kanban{grid-template-columns:1fr}.stats-grid{grid-template-columns:repeat(2,1fr)}.f-row{grid-template-columns:1fr}}
+@media(max-width:780px){
+  .app{flex-direction:column;}
+  .sidebar{display:flex;position:static;width:100%;height:auto;flex-direction:row;flex-wrap:wrap;gap:6px;padding:12px 14px;border-right:0;border-bottom:1px solid var(--b1);overflow:visible;}
+  .sidebar .logo,.sidebar .nav-label{display:none;}
+  .sidebar .nav-item{min-height:44px;padding:9px 10px;margin:0;font-size:12px;}
+  .sidebar .sidebar-bottom{margin:0 0 0 auto;justify-content:center;}
+  .sidebar .xp-box{display:none;}
+  .theme-btn{min-height:44px;}
+  .main{margin-left:0;width:100%;}
+  .header{flex-wrap:wrap;padding:14px 16px;gap:12px;}
+  .header-info{flex:1;min-width:0;}
+  .header .search-wrap{order:3;flex:1 0 100%;max-width:none;margin:0;}
+  .header .btn-new{min-height:44px;white-space:normal;max-width:48%;}
+  .content{padding:16px;}
+  .kanban{grid-template-columns:1fr;}
+  .stats-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .f-row{grid-template-columns:1fr;}
+  .modal{width:100%;max-height:90dvh;overflow-y:auto;}
+  .modal-foot{flex-wrap:wrap;}
+  input,textarea,select{font-size:16px!important;}
+  .flt-btn,.btn-status,.btn-pri,.btn-sec,.btn-danger{min-height:44px;}
+  .task-title{white-space:normal;overflow-wrap:anywhere;}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important;}
+  #confetti{display:none;}
+}
 </style>
 </head>
 <body>
@@ -293,7 +321,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-seri
 <aside class="sidebar">
   <div class="logo">
     <img class="logo-icon" src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?fit=crop&amp;crop=center&amp;w=180&amp;h=180&amp;fm=png" width="42" height="42" alt="Aurora boreal" style="object-fit:cover;">
-    <div><div class="logo-text">Aurian App</div><div class="logo-sub">Seu dia, mais leve</div></div>
+    <div><div class="logo-text">ALRIAN APP</div><div class="logo-sub">Seu dia, mais leve</div></div>
   </div>
 
   <div class="nav-label">Menu</div>
@@ -324,13 +352,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-seri
   <!-- HEADER -->
   <header class="header">
     <div class="header-info">
-      <div class="logo-sub" style="color:var(--purple-light);font-weight:700;margin-bottom:4px;">Aurian App</div>
+      <div class="logo-sub" style="color:var(--purple-light);font-weight:700;margin-bottom:4px;">ALRIAN APP</div>
       <div class="header-title" id="view-label">Dashboard</div>
       <div class="header-date" id="hdr-date"></div>
     </div>
     <div class="search-wrap">
       <span class="search-ico">🔍</span>
-      <input class="search-inp" type="text" placeholder="Buscar pendências..." id="search" oninput="renderAll()">
+      <input class="search-inp" type="search" placeholder="Buscar título ou descrição..." aria-label="Buscar tarefas por título ou descrição" id="search" oninput="renderAll()">
     </div>
     <button class="btn-new" onclick="openNew()">➕ Nova Pendência</button>
   </header>
@@ -348,6 +376,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-seri
             <button class="flt-btn" onclick="dFilter('em_progresso',this)">Em Progresso</button>
             <button class="flt-btn" onclick="dFilter('concluida',this)">Concluídas</button>
             <button class="flt-btn" onclick="dFilter('critica',this)">🔴 Críticas</button>
+            <button class="flt-btn" onclick="dFilter('atrasada',this)">⏰ Atrasadas</button>
+            <button class="flt-btn" onclick="dFilter('sem_prazo',this)">Sem prazo</button>
           </div>
           <div class="section">
             <div class="sec-header"><span class="sec-title">Pendências</span><span class="sec-action" onclick="openNew()">+ Adicionar</span></div>
@@ -395,7 +425,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-seri
     <!-- ══ VIEW: TODAY ══ -->
     <div id="v-today" class="hidden">
       <div class="section">
-        <div class="sec-header"><span class="sec-title">📅 Tarefas de Hoje</span><span class="sec-action" onclick="openNew()">+ Adicionar</span></div>
+        <div class="sec-header"><span class="sec-title">📅 Hoje e atrasadas</span><span class="sec-action" onclick="openNew()">+ Adicionar</span></div>
         <div class="task-list" id="tl-today"></div>
       </div>
     </div>
@@ -600,16 +630,32 @@ function taskCard(t) {
 // ══════════════════════════════════════════════
 function filtered(filt) {
   let list=[...T];
-  const q=document.getElementById('search').value.toLowerCase().trim();
+  const normalize=value=>String(value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+  const q=normalize(document.getElementById('search').value).trim();
+  const active=t=>t.status!=='concluida'&&t.status!=='cancelada';
+  const now=Date.now();
+  const deadline=t=>{
+    const value=t.dataLimite?new Date(t.dataLimite).getTime():NaN;
+    return Number.isFinite(value)?value:Infinity;
+  };
   if(catFilt) list=list.filter(t=>t.categoria===catFilt);
-  if(q) list=list.filter(t=>t.titulo.toLowerCase().includes(q)||(t.descricao||'').toLowerCase().includes(q));
-  if(filt==='critica') list=list.filter(t=>t.prioridade==='critica'&&t.status!=='concluida');
+  if(q) list=list.filter(t=>normalize(t.titulo).includes(q)||normalize(t.descricao).includes(q));
+  if(filt==='critica') list=list.filter(t=>t.prioridade==='critica'&&active(t));
+  else if(filt==='atrasada') list=list.filter(t=>active(t)&&deadline(t)<now);
+  else if(filt==='sem_prazo') list=list.filter(t=>active(t)&&deadline(t)===Infinity);
+  else if(filt==='aberta') list=list.filter(t=>t.status==='aberta'||t.status==='pendente');
   else if(filt&&filt!=='all') list=list.filter(t=>t.status===filt);
   const ps={critica:4,alta:3,media:2,baixa:1};
   list.sort((a,b)=>{
-    if(a.status==='concluida'&&b.status!=='concluida') return 1;
-    if(b.status==='concluida'&&a.status!=='concluida') return -1;
-    return (ps[b.prioridade]||0)-(ps[a.prioridade]||0);
+    const state=Number(!active(a))-Number(!active(b));
+    if(state) return state;
+    const overdue=Number(active(b)&&deadline(b)<now)-Number(active(a)&&deadline(a)<now);
+    if(overdue) return overdue;
+    const priority=(ps[b.prioridade]||0)-(ps[a.prioridade]||0);
+    if(priority) return priority;
+    const ad=deadline(a),bd=deadline(b);
+    if(ad!==bd) return ad<bd?-1:1;
+    return (new Date(b.dataCriacao).getTime()||0)-(new Date(a.dataCriacao).getTime()||0);
   });
   return list;
 }
@@ -627,17 +673,25 @@ function renderAllList() {
 function renderToday() {
   const today=new Date(); today.setHours(0,0,0,0);
   const tom=new Date(today); tom.setDate(tom.getDate()+1);
-  const list=T.filter(t=>{
-    if(t.dataLimite){const d=new Date(t.dataLimite);return d>=today&&d<tom;}
-    const c=new Date(t.dataCriacao); c.setHours(0,0,0,0); return c.getTime()===today.getTime();
-  });
-  renderList('tl-today',list.length?list:[]);
-  if(!list.length) document.getElementById('tl-today').innerHTML=`<div class="empty"><div class="empty-ico">☀️</div><div class="empty-ttl">Dia livre!</div><div class="empty-sub">Sem tarefas com prazo hoje.</div></div>`;
+  const dueToday=t=>{
+    if(t.status==='concluida'||t.status==='cancelada') return false;
+    if(t.dataLimite) return new Date(t.dataLimite)<tom;
+    const created=new Date(t.dataCriacao);
+    return created>=today&&created<tom;
+  };
+  const list=filtered('all').filter(dueToday);
+  renderList('tl-today',list);
+  const badge=document.getElementById('badge-today');
+  if(badge) badge.textContent=String(T.filter(dueToday).length);
+  if(!list.length){
+    const searching=document.getElementById('search').value.trim()||catFilt;
+    document.getElementById('tl-today').innerHTML=`<div class="empty"><div class="empty-ico">${searching?'🔎':'☀️'}</div><div class="empty-ttl">${searching?'Nenhuma tarefa encontrada':'Tudo em dia!'}</div><div class="empty-sub">${searching?'Tente outra busca ou limpe o filtro de categoria.':'Sem tarefas pendentes de hoje ou atrasadas. Confira também as tarefas sem prazo em Todas.'}</div></div>`;
+  }
 }
 function renderKanban() {
   const cols=[{id:'aberta',lbl:'A Fazer',dot:'var(--purple)'},{id:'em_progresso',lbl:'Em Progresso',dot:'var(--blue)'},{id:'concluida',lbl:'Concluído',dot:'var(--mint)'}];
   document.getElementById('kanban-board').innerHTML=cols.map(c=>{
-    const tasks=T.filter(t=>t.status===c.id);
+    const tasks=filtered('all').filter(t=>t.status===c.id||(c.id==='aberta'&&t.status==='pendente'));
     return `<div class="k-col">
       <div class="k-head"><div class="k-dot" style="background:${c.dot}"></div><span class="k-title">${c.lbl}</span><span class="k-count">${tasks.length}</span></div>
       <div class="k-list">${tasks.length?tasks.map(t=>`
@@ -773,7 +827,7 @@ function aFilter(f,btn) { aFilt=f; document.querySelectorAll('#af .flt-btn').for
 //  EDIT MODAL
 // ══════════════════════════════════════════════
 function openNew() {
-  editId=null; mActs=[]; selPriority='critica';
+  editId=null; mActs=[]; selPriority='media';
   document.getElementById('edit-title').textContent='Nova Pendência';
   document.getElementById('f-titulo').value='';
   document.getElementById('f-desc').value='';
@@ -791,7 +845,9 @@ function openEdit(id) {
   document.getElementById('f-titulo').value=t.titulo;
   document.getElementById('f-desc').value=t.descricao||'';
   document.getElementById('f-cat').value=t.categoria;
-  document.getElementById('f-dl').value=t.dataLimite?new Date(t.dataLimite).toISOString().slice(0,16):'';
+  const deadline=t.dataLimite?new Date(t.dataLimite):null;
+  document.getElementById('f-dl').value=deadline&&Number.isFinite(deadline.getTime())
+    ?new Date(deadline.getTime()-deadline.getTimezoneOffset()*60000).toISOString().slice(0,16):'';
   updatePriUI(); renderActList();
   document.getElementById('ov-edit').classList.add('open');
 }
@@ -824,10 +880,14 @@ function renderActList() {
 
 function saveTask() {
   const title=document.getElementById('f-titulo').value.trim();
-  if(!title){toast('Digite um título','err','⚠️');return;}
-  const dl=document.getElementById('f-dl').value;
+  if(!title){toast('Digite um título','err','⚠️');document.getElementById('f-titulo').focus();return;}
+  if(title.length>200){toast('Use até 200 caracteres no título','err','⚠️');return;}
+  const deadlineInput=document.getElementById('f-dl');
+  const dl=deadlineInput.value;
+  if(!deadlineInput.validity.valid||(dl&&!Number.isFinite(new Date(dl).getTime()))){toast('Informe um prazo válido','err','⚠️');deadlineInput.focus();return;}
   if(editId) {
     const t=T.find(x=>x.id===editId);
+    if(!t){toast('Esta tarefa não está mais na lista. Feche e tente novamente.','err','⚠️');return;}
     t.titulo=title; t.descricao=document.getElementById('f-desc').value.trim();
     t.categoria=document.getElementById('f-cat').value;
     t.prioridade=selPriority; t.dataLimite=dl?new Date(dl).getTime():null; t.acoes=mActs;
@@ -846,7 +906,7 @@ function saveTask() {
 // ══════════════════════════════════════════════
 function openDet(id) {
   const t=T.find(x=>x.id===id); if(!t) return;
-  document.getElementById('det-title').textContent=esc(t.titulo);
+  document.getElementById('det-title').textContent=t.titulo;
   const dl=t.dataLimite?fmtDl(t.dataLimite):'Sem prazo';
   const prog=calcProg(t);
   document.getElementById('det-body').innerHTML=`
