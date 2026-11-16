@@ -11,8 +11,8 @@
 <meta name="apple-mobile-web-app-title" content="ALRIAN APP">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="manifest" href="./manifest.webmanifest">
-<link rel="icon" type="image/png" sizes="32x32" href="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?fit=crop&amp;crop=center&amp;w=32&amp;h=32&amp;fm=png">
-<link rel="apple-touch-icon" sizes="180x180" href="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?fit=crop&amp;crop=center&amp;w=180&amp;h=180&amp;fm=png">
+<link rel="icon" type="image/jpeg" href="/uploads/WhatsApp_Image_2026-11-16_at_16.15.29.jpeg">
+<link rel="apple-touch-icon" href="/uploads/WhatsApp_Image_2026-11-16_at_16.15.29.jpeg">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="ALRIAN APP">
@@ -353,6 +353,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-seri
   <!-- HEADER -->
   <header class="header">
     <div class="header-info">
+      <img src="/uploads/WhatsApp_Image_2026-11-16_at_16.15.29.jpeg" alt="Alrian Pinheiro — Consultor Financeiro" width="112" height="84" class="block rounded-lg object-contain mb-2" style="display:block;width:112px;height:84px;object-fit:contain;border-radius:8px;margin-bottom:8px;">
       <div class="logo-sub" style="color:var(--purple-light);font-weight:700;margin-bottom:4px;">ALRIAN APP</div>
       <div class="header-title" id="view-label">Dashboard</div>
       <div class="header-date" id="hdr-date"></div>
@@ -463,17 +464,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-seri
       <div class="modal-x" onclick="closeEdit()">✕</div>
     </div>
     <div class="modal-body">
-      <section id="voice-entry" class="flex flex-col gap-3 rounded-xl" aria-label="Preencher tarefa por voz" style="display:flex;flex-direction:column;gap:10px;padding:14px;margin-bottom:18px;background:var(--card);border:1px solid var(--b2);border-radius:12px;">
-        <label for="voice-command" class="f-label" style="color:var(--purple-light);">🎙️ Fale uma tarefa por vez</label>
-        <p style="font-size:12px;line-height:1.6;color:var(--t2);">Exemplo: Consulta médica amanhã às 14 horas, prioridade alta. O comando preenche os campos abaixo; revise antes de salvar.</p>
-        <textarea id="voice-command" class="f-ta" rows="3" maxlength="2000" placeholder="Fale ou escreva seu comando aqui..."></textarea>
-        <div class="flex flex-wrap gap-2" style="display:flex;flex-wrap:wrap;gap:8px;">
-          <button id="voice-start" class="btn-sec" type="button" aria-pressed="false">🎙️ Falar</button>
-          <button id="voice-apply" class="btn-pri" type="button">Interpretar comando</button>
-        </div>
-        <p id="voice-status" role="status" aria-live="polite" style="font-size:12px;line-height:1.6;color:var(--t2);"></p>
-        <p style="font-size:11px;line-height:1.5;color:var(--t2);">Ao tocar em Falar, o navegador pode enviar o áudio ao serviço de reconhecimento de voz dele. A interpretação usa regras de palavras e datas. Nenhuma tarefa é salva automaticamente. Aplicar um comando substitui título, descrição, categoria, prazo e prioridade deste formulário.</p>
-      </section>
       <div class="f-group">
         <label class="f-label">Título *</label>
         <input class="f-inp" id="f-titulo" type="text" placeholder="O que precisa ser feito?">
@@ -1064,6 +1054,5 @@ document.addEventListener('keydown',e=>{
 // ── GO! ──
 init();
 </script>
-<script src="./voice.js"></script>
 </body>
 </html>
