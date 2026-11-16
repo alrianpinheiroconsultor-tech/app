@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="160" viewBox="0 0 640 160" role="img" aria-labelledby="title">
+  <title id="title">AP — Ariane Pinheiro — ALRIAN APP</title>
+  <rect width="640" height="160" rx="20" fill="#11112a"/>
+  <circle cx="80" cy="80" r="58" fill="none" stroke="#e5c58e" stroke-width="1.5"/>
+  <g transform="translate(26 29) scale(.21)" fill="none" stroke="#e5c58e" stroke-width="16" stroke-linecap="square" stroke-linejoin="round">
+    <path d="M110 310 L184 132 L258 310 M136 246 H232"/>
+    <path d="M288 310 V140 H340 C416 140 416 246 340 246 H288"/>
+  </g>
+  <path d="M156 43 V117" stroke="#e5c58e" stroke-opacity=".35"/>
+  <text x="184" y="83" font-family="DejaVu Serif, Georgia, serif" font-size="38" fill="#e5c58e">Ariane Pinheiro</text>
+  <text x="187" y="114" font-family="DejaVu Sans, sans-serif" font-size="15" letter-spacing="5" fill="#f1f2f6">ALRIAN APP</text>
+</svg>

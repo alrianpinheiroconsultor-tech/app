@@ -10,23 +10,24 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="ALRIAN APP">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<link rel="manifest" href="./manifest.webmanifest">
-<link rel="icon" type="image/jpeg" href="/uploads/WhatsApp_Image_2026-11-16_at_16.15.29.jpeg">
-<link rel="apple-touch-icon" href="/uploads/WhatsApp_Image_2026-11-16_at_16.15.29.jpeg">
+<link rel="manifest" href="./manifest.webmanifest?v=ap-2">
+<link rel="icon" type="image/svg+xml" href="./assets/ap-icon-v2.svg">
+<link rel="icon" type="image/png" sizes="192x192" href="./assets/ap-icon-v2-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="./assets/ap-icon-v2-180.png">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="ALRIAN APP">
 <meta property="og:title" content="ALRIAN APP — Organize seu dia">
 <meta property="og:description" content="Suas tarefas, prioridades e conquistas em um só lugar.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?fit=crop&amp;crop=center&amp;w=1200&amp;h=630&amp;fm=jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Aurora boreal em tons verdes sobre um céu noturno — ALRIAN APP">
+<meta property="og:image" content="./assets/ap-icon-v2-512.png">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<meta property="og:image:alt" content="AP — Ariane Pinheiro — ALRIAN APP">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="ALRIAN APP — Organize seu dia">
 <meta name="twitter:description" content="Suas tarefas, prioridades e conquistas em um só lugar.">
-<meta name="twitter:image" content="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?fit=crop&amp;crop=center&amp;w=1200&amp;h=630&amp;fm=jpg">
-<meta name="twitter:image:alt" content="Aurora boreal em um céu noturno — ALRIAN APP">
+<meta name="twitter:image" content="./assets/ap-icon-v2-512.png">
+<meta name="twitter:image:alt" content="AP — Ariane Pinheiro — ALRIAN APP">
 <style>
 :root {
   --purple: #6C5CE7; --purple-light: #a29bfe; --purple-dark: #5a4dd6;
@@ -319,9 +320,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-seri
 <div class="app">
 <!-- ════════ SIDEBAR ════════ -->
 <aside class="sidebar">
-  <div class="logo">
-    <img class="logo-icon" src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?fit=crop&amp;crop=center&amp;w=180&amp;h=180&amp;fm=png" width="42" height="42" alt="Aurora boreal" style="object-fit:cover;">
-    <div><div class="logo-text">ALRIAN APP</div><div class="logo-sub">Seu dia, mais leve</div></div>
+  <div class="logo flex items-center">
+    <img src="./assets/ap-signature-v2.svg" width="640" height="160" alt="AP — Ariane Pinheiro — ALRIAN APP" class="block w-full rounded-xl object-contain" style="display:block;width:100%;height:auto;border-radius:12px;">
   </div>
 
   <button type="button" class="theme-btn flex items-center" onclick="openNew();document.getElementById('voice-command').focus()" style="margin-bottom:14px;color:var(--purple-light);font-weight:700;">🎙️ Nova tarefa por voz</button>
@@ -353,8 +353,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-seri
   <!-- HEADER -->
   <header class="header">
     <div class="header-info">
-      <img src="/uploads/WhatsApp_Image_2026-11-16_at_16.15.29.jpeg" alt="Alrian Pinheiro — Consultor Financeiro" width="112" height="84" class="block rounded-lg object-contain mb-2" style="display:block;width:112px;height:84px;object-fit:contain;border-radius:8px;margin-bottom:8px;">
-      <div class="logo-sub" style="color:var(--purple-light);font-weight:700;margin-bottom:4px;">ALRIAN APP</div>
+      <img src="./assets/ap-signature-v2.svg" alt="AP — Ariane Pinheiro — ALRIAN APP" width="640" height="160" class="block max-w-full rounded-xl object-contain mb-3" style="display:block;width:280px;max-width:100%;height:auto;object-fit:contain;border-radius:12px;margin-bottom:12px;">
       <div class="header-title" id="view-label">Dashboard</div>
       <div class="header-date" id="hdr-date"></div>
     </div>

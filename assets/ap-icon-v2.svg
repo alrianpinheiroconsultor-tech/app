@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">AP — Ariane Pinheiro</title>
+  <desc id="desc">Monograma AP dourado sobre fundo escuro, com o nome Ariane Pinheiro.</desc>
+  <rect width="512" height="512" fill="#11112a"/>
+  <circle cx="256" cy="256" r="218" fill="none" stroke="#e5c58e" stroke-width="2"/>
+  <circle cx="256" cy="256" r="206" fill="none" stroke="#e5c58e" stroke-opacity=".25" stroke-width="1"/>
+  <g fill="none" stroke="#e5c58e" stroke-width="16" stroke-linecap="square" stroke-linejoin="round">
+    <path d="M110 310 L184 132 L258 310 M136 246 H232"/>
+    <path d="M288 310 V140 H340 C416 140 416 246 340 246 H288"/>
+  </g>
+  <path d="M176 346 H336" stroke="#e5c58e" stroke-width="2"/>
+  <text x="256" y="389" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="25" letter-spacing="2" fill="#e5c58e">ARIANE PINHEIRO</text>
+</svg>
